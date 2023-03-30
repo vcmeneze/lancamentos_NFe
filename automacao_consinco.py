@@ -34,7 +34,7 @@ def notas():
     time.sleep(2)
     # Encontrar o campo de seleção de categoria e clicar nele
     campo_categoria = driver.find_elements("xpath",'//*[@id="inputGroupSelect01"]')
-    campo_categoria[0].click()
+    campo_categoria.click()
     time.sleep(1)   
 
     # Inserir o valor "V" no campo de seleção de categoria
@@ -47,8 +47,8 @@ def notas():
     time.sleep(1)
 
     # Inserir o valor "P" no campo de seleção de categoria
-    campo_categoria[1].send_keys(Keys.ENTER)
-    campo_categoria[1].send_keys('P')
+    campo_categoria.send_keys(Keys.ENTER)
+    campo_categoria.send_keys('P')
 
     # Encontrar o botão de pesquisa e clicar nele
     botao_pesquisa = driver.find_element("xpath",'//*[@id="multiCollapseExample1"]/form/div[2]/div/button')
