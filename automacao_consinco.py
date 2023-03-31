@@ -50,11 +50,24 @@ def lançamento():
     elemento = driver.find_element("xpath", "/html/body/div[1]/div[1]/section/main/main/div[3]/div[6]/table/tbody/tr[1]/td[2]")
     loja = int(elemento.text)
 
+    elemento2 = driver.find_element("xpath", "/html/body/div[1]/div[1]/section/main/main/div[3]/div[6]/table/tbody/tr[1]/td[3]")
+    num_nfe = (elemento2.text)
+
     # exibir o valor da variável LOJA
     print('loja selecionada: ', loja)
+    print('nota selecionada: ', num_nfe)
 
     if loja == 290:
-    print('iniciando lançamento na loja', loja)
+        print('iniciando lançamento na loja', loja)
+        # Realiza o primeiro clique
+        pyautogui.click(x= 1116 , y= 217 )
     
-    # Realiza o primeiro clique
-    pyautogui.click(x= 1116 , y= 217 )
+    #selecionar a loja 290
+        for i in range (9):
+            pyautogui.click(x= 1296 , y= 299 ) 
+    pyautogui.click(x= 1133 , y= 305 )  
+    pyautogui.click(x= 1863 , y= 545 ) 
+    pyautogui.doubleClick(x= 1135 , y= 193 ) 
+    pyautogui.typewrite(num_nfe)
+    pyautogui.press('f8')
+lançamento()
