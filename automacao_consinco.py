@@ -45,37 +45,16 @@ def view_notas():
     time.sleep(2)
 view_notas()
 
+def lançamento():
+    # encontrar o elemento com a xpath desejada e obter seu valor
+    elemento = driver.find_element("xpath", "/html/body/div[1]/div[1]/section/main/main/div[3]/div[6]/table/tbody/tr[1]/td[2]")
+    loja = int(elemento.text)
 
+    # exibir o valor da variável LOJA
+    print('loja selecionada: ', loja)
 
-#objetos de estudo abaixo, ainda vão ser inttetgrados ao código
-element = driver.find_element("xpath", '/html/body/div[1]/div[1]/section/main/main/div[3]/div[6]/table/tbody/tr[1]/td[2]')
-
-# Obter o texto do elemento
-texto = element.text
-
-# Atribuir o valor a variável "loja"
-loja = texto
-
-# Espera 5 segundos antes de começar a execução
-time.sleep(3)
-
-# Realiza o primeiro clique
-pyautogui.click(x= 1116 , y= 217 )
-
-# Espera 1 segundo antes de realizar o próximo clique
-time.sleep(1)
-
-# Realiza o segundo clique
-pyautogui.click(x= 1116 , y= 217 )
-
-# Espera 1 segundo antes de realizar o próximo clique
-time.sleep(1)
-
-# Realiza o terceiro clique
-pyautogui.click(x= 1116 , y= 217 )
-
-# Espera 1 segundo antes de realizar o próximo clique
-time.sleep(1)
-
-# Realiza o quarto clique
-pyautogui.click(x= 1116 , y= 217 )
+    if loja == 290:
+    print('iniciando lançamento na loja', loja)
+    
+    # Realiza o primeiro clique
+    pyautogui.click(x= 1116 , y= 217 )
