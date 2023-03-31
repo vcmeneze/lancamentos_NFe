@@ -12,11 +12,11 @@ def login():
 
     # Encontrar o campo de email e preencher com o valor fornecido
     campo_email = driver.find_element("xpath", '//*[@id="telaLogin"]/div[1]/form/div[1]/input')
-    campo_email.send_keys('vitor@bispoedantas.com.br')
+    campo_email.send_keys('confidencial')
 
     # Encontrar o campo de senha e preencher com o valor fornecido
     campo_senha = driver.find_element("xpath", '//*[@id="exampleInputPassword1"]')
-    campo_senha.send_keys('123456')
+    campo_senha.send_keys('confidencial')
 
     # Encontrar o botão de login e clicar nele
     botao_login = driver.find_element("xpath", '//*[@id="telaLogin"]/div[1]/form/div[3]/button')
