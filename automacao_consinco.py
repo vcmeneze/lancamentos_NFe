@@ -45,6 +45,9 @@ def view_notas():
     time.sleep(2)
 view_notas()
 
+
+
+#objetos de estudo abaixo, ainda vão ser inttetgrados ao código
 element = driver.find_element("xpath", '/html/body/div[1]/div[1]/section/main/main/div[3]/div[6]/table/tbody/tr[1]/td[2]')
 
 # Obter o texto do elemento
